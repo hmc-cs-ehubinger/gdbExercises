@@ -19,13 +19,11 @@ IntList::IntList():size_(0)
 }
 
 //copy constructor
-IntList::IntList(const IntList& orig)
+IntList::IntList(const IntList& orig):size_(0)
 {
-  IntList newList;
   for (IntList::iterator i = orig.begin(); i != orig.end(); ++i){
-    newList.push_back(*i);
+    push_back(*i);
   }
-  *this=newList;
 }
 
 //destructor
