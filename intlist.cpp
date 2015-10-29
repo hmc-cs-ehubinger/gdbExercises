@@ -14,14 +14,14 @@ using namespace std;
 
 //default constructor
 IntList::IntList():
-  size_(0), front_(nullptr)
+  size_(0), front_(nullptr), back_(nullptr)
 {
 
 }
 
 //copy constructor
 IntList::IntList(const IntList& orig):
-  size_(0), front_(nullptr)
+  size_(0), front_(nullptr), back_(nullptr)
 {
   for (IntList::iterator i = orig.begin(); i != orig.end(); ++i){
     push_back(*i);
