@@ -121,8 +121,8 @@ void IntList::push_back(int pushee)
     Element* newElement = new Element(pushee, nullptr);
     back_->next_ = newElement;
     back_ = newElement;
+    ++size_;
   }
-  ++size_;
 }
 
 
