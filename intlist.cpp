@@ -97,17 +97,19 @@ int IntList::pop_front()
 {
   assert (empty() == false);
 
+  int retval = front_->value_;
+
   if (size_ > 1) {
     Element* poppedElement = front_;
-    front_= poppedElement->next_;
+    front_ = poppedElement->next_;
     delete poppedElement;
-    --size_;
-    return poppedElement->value_;
+    poppedElement = nullptr;
   } else {
     delete front_;
-    --size_;
-    return front_->value_;
   }
+  --size_;
+
+  return retval;
 }
 
 // function to push elements with value pushee to back of intlist
