@@ -6,7 +6,7 @@ int main() {
   int array[5];
   int bar = 42;
 
-  for (unsigned int i = 3; i >= 0; --i) {
+  for (int i = 3; i >= 0; --i) {
     array[i] = i * 10;
   }
 
